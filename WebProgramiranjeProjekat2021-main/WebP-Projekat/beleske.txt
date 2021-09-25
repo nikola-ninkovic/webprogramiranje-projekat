@@ -1,0 +1,2 @@
+-Nema nikakve provere prilikom registrovanja (mala slova, duzina lozinke, isti username)
+-Takodje i pri kreiranju ostalih uloga 

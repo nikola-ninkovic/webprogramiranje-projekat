@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prinesi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="loadIndexPage.js"></script>
+    <script src="restorani.js"></script>
+</head>
+<body class="header">
+    <selection class="header">
+        <nav>
+            <a href="index.html"><img src="pictures/rlogo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="mojRestoran.html" id="mojRestoran">Moj restoran</a></li>
+                    <li><a id="menadzerPorudzbine" href="menadzerPorudzbine.html">Porudzbine</a></li>
+                    <li><a href="noviArtikal.html" id="noviArtikal">Novi artikal</a></li>
+                    <li><a id="login" href="loginform.html">Login</a></li>
+                    <li><a id="korpaPanel" href="korpa.html">Korpa</a></li>
+                    <li><a id="kupacPorudzbine" href="kupacPorudzbine.html">Porudzbine</a></li>
+                    <li><a id="dostavljacPorudzbine" href="dostavljacPorudzbine.html">Porudzbine</a></li>
+                    <li><a id="profilPanel" href="profil.html">Profil</a></li>
+                    <li><a class="active" id="logout" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </selection>
+    
+    <div class="filters">
+        <nav>
+            <ul>
+                <li><input type="text" id="searchName" placeholder="naziv"></li>
+                <li><input type="text" id="searchType" placeholder="tip"></li>
+                <li><input type="text" id="searchLocation" placeholder="grad"></li>
+                <li><input type="text" id="searchAverageRating" placeholder="ocena"></li>
+                <li><select name="type" id="typeSelect">
+                    <option value="Svi" selected>Tip</option>
+                    <option value="Italijanski">Italijanski</option>
+                    <option value="Kineski">Kineski</option>
+                    <option value="Rostilj">Rostilj</option>
+                </select></li>
+                <li><select name="opened" id="openedSelect">
+                    <option value="Svi" selected>Svi</option>
+                    <option value="Opened">Otvoren</option>
+                </select></li>
+                <li><select name="sort" id="sortSelect">
+                    <option value="Svi" selected>Sortiraj po</option>
+                    <option value="Naziv">Naziv</option>
+                    <option value="Rating">Rating</option>
+                    <option value="Lokacija">Lokacija</option>
+                </select></li>
+                <li><select name="ascDesc" id="ascDescSelect">
+                    <option value="Rastuce" selected>Rastuce</option>
+                    <option value="Opadajuce">Opadajuce</option>
+                </select></li>
+
+                <li><button id="reset">reset</button></li>
+            </ul>
+        </nav>
+    </div>
+    
+        
+    <div class="small-container">
+        <div class="row">
+            <div class="col-4">
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="podaci">
+        
+    </div>
+    
+    <div class="container">
+        <div class="roww">
+        </div>
+    </div>
+
+    <div class="container" id="komentari">
+        <h1 style="color: #fff; text-align: center; margin-bottom: 3%;" >Komentari</h1>
+        <div class="rowwww">
+        </div>
+    </div>
+
+</body>
+</html>

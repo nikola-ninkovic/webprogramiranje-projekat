@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prinesi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <script src="loadIndexPage.js"></script>
+    <script src="editProfile.js"></script>
+    <script src="createManagerOrDostavljac.js"></script>
+    <script src="createRestoran.js"></script>
+</head>
+<body class="header">
+    <selection class="header">
+        <nav>
+            <a href="index.html"><img src="pictures/rlogo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="mojRestoran.html" id="mojRestoran">Moj restoran</a></li>
+                    <li><a id="menadzerPorudzbine" href="menadzerPorudzbine.html">Porudzbine</a></li>
+                    <li><a href="noviArtikal.html" id="noviArtikal">Novi artikal</a></li>
+                    <li><a id="login" href="loginform.html">Login</a></li>
+                    <li><a id="korpaPanel" href="korpa.html">Korpa</a></li>
+                    <li><a id="kupacPorudzbine" href="kupacPorudzbine.html">Porudzbine</a></li>
+                    <li><a id="dostavljacPorudzbine" href="dostavljacPorudzbine.html">Porudzbine</a></li>
+                    <li><a id="profilPanel" href="profil.html">Profil</a></li>
+                    <li><a class="active" id="logout" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </selection>
+    
+    <div class="filterss">
+        <input type="text" id="searchIme" placeholder="Ime">
+        <input type="text" id="searchPrezime" placeholder="Prezime">
+        <input type="text" id="searchKorisnickoIme" placeholder="Korisnicko Ime">
+        <select name="type" id="typeSelectt">
+            <option value="Tip" selected>Tip</option>
+            <option value="Zlatni">Zlatni</option>
+            <option value="Srebreni">Srebreni</option>
+            <option value="Bronzani">Bronzani</option>
+        </select>
+        <select name="uloga" id="ulogaSelect">
+            <option value="Svi" selected>Sortiraj</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Menadzer">Menadzer</option>
+            <option value="Dostavljac">Dostavljac</option>
+            <option value="Kupac">Kupac</option>
+        </select>
+        <select name="sort" id="sortSelectt">
+            <option value="Svi" selected>Sortiraj</option>
+            <option value="ime">Ime</option>
+            <option value="prezime">Prezime</option>
+            <option value="korisnickoIme">Korisnicko ime</option>
+            <option value="brojBodovaZaSledeceUnapredjenje">Broj sakupljenih bodova</option>
+        </select>
+        <select name="ascDesc" id="ascDesc">
+            <option value="Rastuce" selected>Rastuce</option>
+            <option value="Opadajuce">Opadajuce</option>
+        </select>
+        <button id="resett">reset</button>
+    </div>
+
+    <div class="nav-buttons-admin">
+        <nav>
+            <ul>
+                <li><a href="#" id="profilAdmina">Profil</a></li>
+                <li><a href="#" id="kreirajMenadzera">Kreiraj menadzera</a></li>
+                <li><a href="#" id="korisnici">Korisnici</a></li>
+                <li><a href="#" id="sumnjiviKorisnici">Sumnjivi korisnici</a></li>
+                <li><a href="#" id="kreirajRestoran">Kreiraj restoran</a></li>
+                <li><a href="#" id="kreirajDostavljaca">Kreiraj dostavljaca</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="box2">
+        <ul id="box2ul">
+            
+        </ul>
+    </div>
+
+    <div class="box1">
+        <div class="loginbox">
+            <form id="forma">
+        
+                <p>Ime</p>
+                <input type="text" name="ime" placeholder="Unesite ime"/>
+                <p>Prezime</p>
+                <input type="text" name="prezime" placeholder="Unesite prezime"/>
+                <p>Pol</p>
+                <select type="text" name="pol">
+                    <option value="musko">Musko</option>
+                    <option value="zensko">Zensko</option>
+                </select>
+                <p>Datum rodjenja</p>
+                <input type="date" name="datumRodjenja"/>
+                <p>Korisnicko ime</p>
+                <input type="text" name="korisnickoIme" placeholder="Unesite novo korisnicko ime" disabled/>
+                <p>Lozinka</p>
+                <input type="text" name="lozinka" placeholder="Unesite novu lozinku"/>
+                <input type="submit" name="" value="Potvrdi">
+                <p id="error" hidden="true"></p>
+                <p id="success" hidden="true"></p>
+           </form>
+        </div>
+    </div>
+
+    <div class="box3">
+        <div class="loginbox">
+            <form id="formaMenadzera">
+        
+                <p>Ime</p>
+                <input type="text" name="imem" placeholder="Unesite ime menadzera"/>
+                <p>Prezime</p>
+                <input type="text" name="prezimem" placeholder="Unesite prezime menadzera"/>
+                <p>Pol</p>
+                <select type="text" name="polm">
+                    <option value="musko">Musko</option>
+                    <option value="zensko">Zensko</option>
+                </select>
+                <p>Datum rodjenja</p>
+                <input type="date" name="datumRodjenjam"/>
+                <p>Korisnicko ime</p>
+                <input type="text" name="korisnickoImem" placeholder="Unesite korisnicko ime menadzera"/>
+                <p>Lozinka</p>
+                <input type="text" name="lozinkam" placeholder="Unesite lozinku"/>
+                <input type="submit" name="" value="Kreiraj menadzera">
+                <p id="error" hidden="true"></p>
+                <p id="success" hidden="true"></p>
+           </form>
+        </div>
+    </div>
+
+    <div class="box4">
+        <div class="loginbox">
+            <form id="formaRestorana">
+                <p>Naziv restorana</p>
+                <input type="text" name="naziv" placeholder="Unesite naziv restorana"/>
+                <p>Tip</p>
+                <select type="text" id="tipRestorana">
+                    <option value=0>Italijanski</option>
+                    <option value=1>Kineski</option>
+                    <option value=2>Rostilj</option>
+                </select>
+                
+                <p>Duzina</p>
+                <input type="text" name="duzina" placeholder="Unesite duzinu"/>
+                <p>Sirina</p>
+                <input type="text" name="sirina" placeholder="Unesite sirinu"/>
+                <p>Grad</p>
+                <input type="text" name="grad" placeholder="Unesite grad"/>
+                <p>Ulica</p>
+                <input type="text" name="ulica" placeholder="Unesite ulicu"/>
+                <p>Zip Code</p>
+                <input type="text" name="zipCode" placeholder="Unesite zip code"/>
+                
+                <p>Logo</p>
+                <input type="file" accept="image/*" id="choose-file" name="choose" onchange="encodeImageFileAsURL(this)"/>
+                <p>Menadzer</p>
+                <select type="text" id="menadzer">
+
+                </select>
+                <input type="submit" name="" value="Kreiraj restoran">
+                <p id="error" hidden="true"></p>
+                <p id="success" hidden="true"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="box6">
+        <div class="loginbox">
+            <form id="formaDostavljaca">
+                <p>Ime</p>
+                <input type="text" name="imed" placeholder="Unesite ime dostavljaca"/>
+                <p>Prezime</p>
+                <input type="text" name="prezimed" placeholder="Unesite prezime dostavljaca"/>
+                <p>Pol</p>
+                <select type="text" name="pold">
+                    <option value="musko">Musko</option>
+                    <option value="zensko">Zensko</option>
+                </select>
+                <p>Datum rodjenja</p>
+                <input type="date" name="datumRodjenjad"/>
+                <p>Korisnicko ime</p>
+                <input type="text" name="korisnickoImed" placeholder="Unesite korisnicko ime dostavljaca"/>
+                <p>Lozinka</p>
+                <input type="text" name="lozinkad" placeholder="Unesite lozinku"/>
+                <input type="submit" name="" value="Kreiraj dostavljaca">
+                <p id="error" hidden="true"></p>
+                <p id="success" hidden="true"></p>
+           </form>
+        </div>
+    </div>
+</div> 
+</body>
+</html>

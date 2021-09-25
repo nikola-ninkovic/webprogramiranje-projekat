@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prinesi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/registration.css">
+    <script src="loadIndexPage.js"></script>
+    <script src="restorani.js"></script>
+    <script src="noviArtikal.js"></script>
+</head>
+<body class="header">
+    <selection class="header">
+        <nav>
+            <a href="index.html"><img src="pictures/rlogo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="mojRestoran.html" id="mojRestoran">Moj restoran</a></li>
+                    <li><a id="menadzerPorudzbine" href="menadzerPorudzbine.html">Porudzbine</a></li>
+                    <li><a href="noviArtikal.html" id="noviArtikal">Novi artikal</a></li>
+                    <li><a id="login" href="loginform.html">Login</a></li>
+                    <li><a id="korpaPanel" href="korpa.html">Korpa</a></li>
+                    <li><a id="profilPanel" href="profil.html">Profil</a></li>
+                    <li><a class="active" id="logout" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </selection>
+    
+        <div class="box5">
+        <div class="loginbox">
+            <form id="formaNoviArtikal">
+                <p>Naziv artikla</p>
+                <input type="text" name="nazivArtikla" placeholder="Unesite naziv artikla"/>
+                
+                <p>Tip artikla</p>
+                <select type="text" id="tipArtikla">
+                    <option value=0>Jelo</option>
+                    <option value=1>Pice</option>
+                </select>
+                
+                <p>Cena artikla</p>
+                <input type="text" name="cenaArtikla" placeholder="Unesite cenu artikla"/>
+                
+                <p>Opis artikla</p>
+                <input type="text" name="opisArtikla" placeholder="Unesite opis artikla"/>
+                
+                <p>Kolicina artikla</p>
+                <input type="text" name="kolicinaArtikla" placeholder="Unesite kolicinu artikla"/>
+                
+                <p>Slika artikla</p>
+                <input type="file" accept="image/*" id="choose-file" name="choose" onchange="encodeImageFileAsURL(this)"/>
+
+                <input type="submit" name="" value="Kreiraj artikal">
+                <p id="error" hidden="true"></p>
+                <p id="success" hidden="true"></p>
+            </form>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

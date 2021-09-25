@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prinesi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="loadIndexPage.js"></script>
+    <script src="menadzerPorudzbine.js"></script>
+</head>
+<body class="header">
+    <selection class="header">
+        <nav>
+            <a href="index.html"><img src="pictures/rlogo.png"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="mojRestoran.html" id="mojRestoran">Moj restoran</a></li>
+                    <li><a id="menadzerPorudzbine" href="menadzerPorudzbine.html">Porudzbine</a></li>
+                    <li><a href="noviArtikal.html" id="noviArtikal">Novi artikal</a></li>
+                    <li><a id="login" href="loginform.html">Login</a></li>
+                    <li><a id="korpaPanel" href="korpa.html">Korpa</a></li>
+                    <li><a id="kupacPorudzbine" href="kupacPorudzbine.html">Porudzbine</a></li>
+                    <li><a id="profilPanel" href="profil.html">Profil</a></li>
+                    <li><a class="active" id="logout" href="#">Log Out</a></li>
+                </ul>
+            </div>
+        </nav>
+    </selection>
+
+    <div class="filtersss">
+        <input type="text" id="searchOd" placeholder="Od (rsd)">
+        <input type="text" id="searchDo" placeholder="Do (rsd)">
+        <input type="date" id="od" />
+        <input type="date" id="do" />
+        <select name="status" id="statusPorudzbine">
+            <option value="Svi" selected>Status porudzbine</option>
+            <option value="Obrada">Obrada</option>
+            <option value="U_pripremi">U pripremi</option>
+            <option value="Ceka_dostavljaca">Ceka dostavljaca</option>
+            <option value="U_transportu">U transportu</option>
+            <option value="Dostavljena">Dostavljena</option>
+            <option value="Otkazana">Otkazana</option>
+        </select>
+        <select name="sort" id="sortSelecttt">
+            <option value="Svi" selected>Sortiraj</option>
+            <option value="cena">Cena porudzbina</option>
+            <option value="datum">Datum porudzbine</option>
+        </select>
+        <select name="ascDesc" id="ascDesc">
+            <option value="Rastuce" selected>Rastuce</option>
+            <option value="Opadajuce">Opadajuce</option>
+        </select>
+        <button id="resett">reset</button>
+    </div>
+
+    <div class="container">
+        <div class="rowwww">
+        </div>
+    </div>
+
+
+</body>
+</html>
